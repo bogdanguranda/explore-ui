@@ -1,0 +1,55 @@
+.item-left .item-middle .item-right {
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+  
+.item-left {
+    width: 150px;
+}
+  
+.item-middle {
+    width: 400px;
+}
+  
+.item-right {
+    width: 110px;
+}
+
+.scroll {
+    height: 550px; 
+    width: 100%;
+}
+
+.row {
+    border: solid 1px lightgray;
+}
+
+.planet-name {
+    margin: 20px;
+}
+
+.description {
+    width: 280px;
+    height: 80px;
+    font-size: 18px;
+    text-align: justify;
+    border: none;
+    resize: none;
+}
+
+.captain-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.captain-name {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #616161;
+}
+
+.robots-label {
+    font-weight: bold;
+    font-size: 15px;
+}

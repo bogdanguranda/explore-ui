@@ -1,0 +1,9 @@
+<div class="box">
+    <form onsubmit="updateStatus()">
+      <select onchange="this.style.color=this.options[this.selectedIndex].style.color">
+          <option *ngFor="let status of statuses | keyvalue" [style.color]="status.value.color" [selected]="status.key === selectedValue" [value]="status.key">
+            {{status.value.viewValue}}
+          </option>
+      </select>
+    </form>
+</div>

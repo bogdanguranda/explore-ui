@@ -1,18 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { PlanetListComponent } from './planet-list/planet-list.component';
+import { StatusComponent } from './status/status.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    ScrollingModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      { path: '', component: PlanetListComponent },
+    ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    PlanetListComponent,
+    StatusComponent
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

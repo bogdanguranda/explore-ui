@@ -1,0 +1,7 @@
+.box select {
+  background-color: white;
+  width: 110px;
+  border: none;
+  font-size: 20px;
+  appearance: none;
+}
