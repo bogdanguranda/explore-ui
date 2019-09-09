@@ -49,11 +49,10 @@ export class PlanetListComponent {
 
     const body = { status: stat, description: desc};
     this.http.put(environment.API_URL + '/planets/' + planetID, body, {observe: 'response'}).subscribe(response => {
-      if (response.status != 200) {
+      if (response.status !== 200) {
         console.log('Failed to update planets, status was: ' + response.status);
       }
     });
-
   }
 
 }

@@ -56,6 +56,10 @@
 
 .button-update {
     border-radius: 12px;
+    height: 30px;
+    width: 60px;
+    font-size: 14px;
+    margin-top: 60px;
 }
 
 .box select {
