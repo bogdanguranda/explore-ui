@@ -30,8 +30,8 @@
 
         <div class="item-right">
           <div class="box">
-            <select onchange="this.style.color=this.options[this.selectedIndex].style.color" formControlName="status" [value]="planet.status">
-                <option *ngFor="let status of statuses" [style.color]="status.color" [value]="status.value">
+            <select onchange="this.style.color=this.options[this.selectedIndex].style.color" formControlName="status" [value]="planet.status" [style.color]="statusColors[planet.status]">
+                <option *ngFor="let status of statuses" [style.color]="statusColors[status.value]" [value]="status.value">
                   {{status.viewValue}}
                 </option>
             </select>

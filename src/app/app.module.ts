@@ -9,7 +9,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { PlanetListComponent } from './planet-list/planet-list.component';
-import { StatusComponent } from './status/status.component';
 
 @NgModule({
   imports: [
@@ -26,8 +25,7 @@ import { StatusComponent } from './status/status.component';
   declarations: [
     AppComponent,
     TopBarComponent,
-    PlanetListComponent,
-    StatusComponent
+    PlanetListComponent
   ],
   bootstrap: [ AppComponent ]
 })
