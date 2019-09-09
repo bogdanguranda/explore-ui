@@ -5,15 +5,15 @@
 }
   
 .item-left {
-    width: 150px;
+    width: 130px;
 }
   
 .item-middle {
-    width: 400px;
+    width: 200px;
 }
   
 .item-right {
-    width: 110px;
+    width: 80px;
 }
 
 .scroll {
@@ -30,7 +30,7 @@
 }
 
 .description {
-    width: 280px;
+    width: 180px;
     height: 80px;
     font-size: 18px;
     text-align: justify;
