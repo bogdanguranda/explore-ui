@@ -53,3 +53,20 @@
     font-weight: bold;
     font-size: 15px;
 }
+
+.button-update {
+    border-radius: 12px;
+}
+
+.box select {
+    background-color: white;
+    width: 110px;
+    border: none;
+    font-size: 20px;
+    appearance: none;
+}
+
+.update-form {
+    display: flex;
+    align-items: center;
+}

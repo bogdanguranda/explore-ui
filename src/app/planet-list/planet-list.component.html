@@ -9,25 +9,37 @@
         </h3>
       </div>
 
-      <div class="item-middle">
-          <textarea *ngIf="planet.description" class="description">"{{ planet.description }}"</textarea>
+      <form [formGroup]="updateForm" (ngSubmit)="onSubmit($event)" class="update-form">
 
-          <p *ngIf="planet.team.captain">
-            <span class="captain-label">by captain </span><span class="captain-name">{{ planet.team.captain.name }}</span>
-          </p>
-      
-          <div *ngIf="planet.team.robots">
-            <span class="robots-label">Robots: </span>
-            <span *ngFor="let robot of planet.team.robots; let last = last;">
-              {{ robot.name }}<span *ngIf="!last">,</span>
-            </span>
+        <input type="hidden" [value]="planet.id">
+        <div class="item-middle">
+            <textarea *ngIf="planet.description" class="description" name="description" formControlName="description" [value]="planet.description"></textarea>
+
+            <p *ngIf="planet.team.captain">
+              <span class="captain-label">by captain </span><span class="captain-name">{{ planet.team.captain.name }}</span>
+            </p>
+        
+            <div *ngIf="planet.team.robots">
+              <span class="robots-label">Robots: </span>
+              <span *ngFor="let robot of planet.team.robots; let last = last;">
+                {{ robot.name }}<span *ngIf="!last">,</span>
+              </span>
+            </div>
+            <button type="submit">Update</button>
+        </div>
+
+        <div class="item-right">
+          <div class="box">
+            <select onchange="this.style.color=this.options[this.selectedIndex].style.color" formControlName="status" [value]="planet.status">
+                <option *ngFor="let status of statuses" [style.color]="status.color" [value]="status.value">
+                  {{status.viewValue}}
+                </option>
+            </select>
           </div>
-      </div>
+        </div>
 
-      <div class="item-right">
-        <app-status [selectedValue]="planet.status"></app-status>
-      </div>
+      </form>
 
   </div>
-  
+
 </cdk-virtual-scroll-viewport>
